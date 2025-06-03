@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+:root {
+  --base-color: #725b4b;
+  --darker-base-color: #5a534b;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--base-color);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-weight: bold;
 }
