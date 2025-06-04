@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+
 import { Buda, Jomolhari } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 
@@ -21,19 +26,28 @@ export const metadata: Metadata = {
   description: "Relax. Renew. Rejuvenate.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${buda.variable} ${jomolhari.variable} relative antialiased h-screen flex flex-col `}
       >
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <NextIntlClientProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
