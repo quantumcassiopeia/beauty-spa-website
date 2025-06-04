@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
           </section>
         </div>
-        <div className="flex gap-2 flex-col items-center md:flex-row md:items-start justify-between mt-10 ">
+        <div className="flex gap-2 flex-col items-center md:flex-row md:items-start justify-between mt-10 opacity-50">
           <div>Copyright @ {new Date().getFullYear()} Peterdraw</div>
           <ul className="flex gap-6">
             <li>

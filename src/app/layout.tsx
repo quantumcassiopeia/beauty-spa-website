@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Buda, Jomolhari } from "next/font/google";
 import "./globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const buda = Buda({
   subsets: ["latin"],
+  weight: "300",
+  variable: "--font-buda",
+});
+
+const jomolhari = Jomolhari({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-jomolhari",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} antialiased h-screen flex flex-col `}
+        className={`${buda.variable} ${jomolhari.variable} relative antialiased h-screen flex flex-col `}
       >
         <Header />
         <main className="flex-1">{children}</main>
