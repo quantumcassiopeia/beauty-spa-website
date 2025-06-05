@@ -1,20 +1,22 @@
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Navbar({ className }: { className?: string }) {
+  const t = useTranslations("Navbar");
   return (
     <nav>
       <ul className={`${className}`}>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">{t("home")}</Link>
         </li>
         <li>
-          <Link href="/">About</Link>
+          <Link href="/">{t("about")}</Link>
         </li>
         <li>
-          <Link href="/">Services</Link>
+          <Link href="/">{t("services")}</Link>
         </li>
         <li>
-          <Link href="/">Contact</Link>
+          <Link href="/">{t("contact")}</Link>
         </li>
       </ul>
     </nav>

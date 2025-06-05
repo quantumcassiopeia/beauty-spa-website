@@ -1,1 +1,33 @@
-{}
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "Footer": {
+    "openingHours": "Opening Hours",
+    "workingDays": "Monday - Saturday:",
+    "sunday": {
+      "title": "Sunday:",
+      "description": "Closed"
+    },
+    "quickLinks": "Menu",
+    "contact": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms & Conditions"
+  },
+
+  "Homepage": {
+    "hero": {
+      "title": "Your escape begins here",
+      "subtitle": "Step into a world of calm, comfort, and beauty - curated just for you."
+    },
+
+    "splitView": {
+      "title": "Experience True Wellness at Beauva",
+      "subtitle": "At Beauva, we believe true beauty blooms in balance. Our spa blends luxury and wellness, offering facials, massages, and more-each designed to renew your body, mind, and soul. Step into serenity, and let self-care become your lifestyle."
+    }
+  }
+}

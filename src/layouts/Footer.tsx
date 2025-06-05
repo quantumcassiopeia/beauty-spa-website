@@ -1,7 +1,10 @@
 import Navbar from "@/components/Navbar";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="w-full">
       <div className="width-full w-full bg-[var(--base-color)]">
@@ -14,27 +17,27 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between">
           <section className="flex flex-col gap-2">
             <div className="mb-10 w-25 h-10 bg-red-500"></div>
-            <h3>Working hours</h3>
+            <h3>{t("openingHours")}</h3>
             <p>
               <span className="font-bold text-[var(--darker-base-color)]">
-                Monday - Saturday:
+                {t("workingDays")}
               </span>{" "}
               9:00am - 8:00pm
             </p>
             <p>
               <span className="font-bold text-[var(--darker-base-color)]">
-                Sunday:
+                {t("sunday.title")}
               </span>{" "}
-              Closed
+              {t("sunday.description")}
             </p>
           </section>
           <section className="flex gap-12 mt-10">
             <div>
-              <h3 className="mb-4">Menu</h3>
+              <h3 className="mb-4">{t("quickLinks")}</h3>
               <Navbar className="flex flex-col gap-3" />
             </div>
             <div>
-              <h3 className="mb-4">Contact us</h3>
+              <h3 className="mb-4">{t("contact")}</h3>
               <div className="flex flex-col gap-3">
                 <p>(+1) 234 567 890</p>
                 <p>123, Main Street, New York</p>
@@ -47,10 +50,10 @@ export default function Footer() {
           <div>Copyright @ {new Date().getFullYear()} Peterdraw</div>
           <ul className="flex gap-6">
             <li>
-              <Link href="#">Privacy Policy</Link>
+              <Link href="#">{t("privacyPolicy")}</Link>
             </li>
             <li>
-              <Link href="#">Terms & Conditions</Link>
+              <Link href="#">{t("termsAndConditions")}</Link>
             </li>
           </ul>
         </div>

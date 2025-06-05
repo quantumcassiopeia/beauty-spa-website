@@ -3,6 +3,8 @@
 :root {
   --base-color: #725b4b;
   --darker-base-color: #5a534b;
+
+  --off-white: #f5f2ed;
 }
 
 body {
@@ -14,7 +16,6 @@ body {
 
 h1 {
   font-family: var(--font-jomolhari), Arial, Helvetica, sans-serif;
-  font-size: 3rem;
 }
 
 h3 {
