@@ -28,22 +28,26 @@ export default function Home() {
         >
           <div className="flex flex-col items-center p-8 md:py-16 md:p-20  md:items-start bg-[var(--off-white)] text-center md:text-left h-full">
             <div className="bg-red-500 rounded-full h-10 w-10"></div>
-            <h1 className="text-4xl my-6 md:text-5xl">
-              {t("splitView.title")}
+            <h1 className="text-4xl text-[var(--darker-base-color)] my-6 md:text-5xl">
+              {t("splitView.title")}{" "}
+              <span className="text-[var(--base-color)]">
+                {t("splitView.span")}
+              </span>
             </h1>
             <p>{t("splitView.subtitle")}</p>
           </div>
         </SplitView>
       </section>
       <section className="flex flex-col items-center w-full px-4">
-        <span className="border-2 border-[var(--base-color)]/20 px-5 pt-0.5 mb-7 rounded-3xl ">
+        <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 mb-7 rounded-3xl ">
           {t("services.tag")}
         </span>
-        <h1 className=" text-center text-4xl mb-5 md:text-5xl">
-          {t("services.title")}
+        <h1 className="text-center text-4xl text-[var(--darker-base-color)] mb-5 md:text-5xl">
+          {t("services.title")}{" "}
+          <span className="text-[var(--base-color)]">{t("services.span")}</span>
         </h1>
         <p className="text-center">{t("services.subtitle")}</p>
-        <div className="flex flex-col items-center w-full mt-8 gap-5 md:justify-evenly md:flex-row md:mt-18">
+        <div className="flex flex-wrap flex-col items-center w-full mt-8 gap-5 md:justify-evenly md:flex-row md:mt-18">
           <FlatCard
             image="/images/towelAndCandles.avif"
             title="Towel and candles"

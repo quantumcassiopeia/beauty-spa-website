@@ -2,22 +2,18 @@
 
 :root {
   --base-color: #725b4b;
-  --darker-base-color: #5a534b;
+  --darker-base-color: #413831;
 
   --off-white: #f5f2ed;
 }
 
 body {
-  font-family: var(--font-buda), Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: var(--font-bricolage), Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
+  font-weight: 500;
   color: var(--base-color);
 }
 
-h1 {
-  font-family: var(--font-jomolhari), Arial, Helvetica, sans-serif;
-}
-
 h3 {
-  font-weight: bold;
+  font-weight: 700;
 }

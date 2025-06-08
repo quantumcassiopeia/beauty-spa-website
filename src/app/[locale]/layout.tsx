@@ -3,22 +3,15 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-import { Buda, Jomolhari } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 
-const buda = Buda({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: "300",
-  variable: "--font-buda",
-});
-
-const jomolhari = Jomolhari({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-jomolhari",
+  variable: "--font-bricolage",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +34,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${buda.variable} ${jomolhari.variable} relative antialiased h-screen flex flex-col `}
+        className={`${bricolage.variable} relative antialiased h-screen flex flex-col `}
       >
         <NextIntlClientProvider>
           <Header />
