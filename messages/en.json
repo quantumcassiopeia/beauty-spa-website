@@ -28,6 +28,12 @@
     "splitView": {
       "title": "Experience True Wellness at Beauva",
       "subtitle": "At Beauva, we believe true beauty blooms in balance. Our spa blends luxury and wellness, offering facials, massages, and more-each designed to renew your body, mind, and soul. Step into serenity, and let self-care become your lifestyle."
+    },
+
+    "services": {
+      "tag": "Services",
+      "title": "Relax. Rejuvenate. Repeat.",
+      "subtitle": "From skincare rituals to full-body therapies, our services are tailored to meet your beauty and wellness goals."
     }
   }
 }

@@ -35,6 +35,37 @@ export default function Home() {
           </div>
         </SplitView>
       </section>
+      <section className="flex flex-col items-center w-full px-4">
+        <span className="border-2 border-[var(--base-color)]/20 px-5 pt-0.5 mb-7 rounded-3xl ">
+          {t("services.tag")}
+        </span>
+        <h1 className=" text-center text-4xl mb-5 md:text-5xl">
+          {t("services.title")}
+        </h1>
+        <p className="text-center">{t("services.subtitle")}</p>
+        <div className="flex flex-col items-center w-full mt-8 gap-5 md:justify-evenly md:flex-row md:mt-18">
+          <FlatCard
+            image="/images/towelAndCandles.avif"
+            title="Towel and candles"
+            description="Lorem"
+          />
+          <FlatCard
+            image="/images/towelAndCandles.avif"
+            title="Towel and candles"
+            description="Lorem"
+          />
+          <FlatCard
+            image="/images/towelAndCandles.avif"
+            title="Towel and candles"
+            description="Lorem"
+          />
+          <FlatCard
+            image="/images/towelAndCandles.avif"
+            title="Towel and candles"
+            description="Lorem "
+          />
+        </div>
+      </section>
     </main>
   );
 }
