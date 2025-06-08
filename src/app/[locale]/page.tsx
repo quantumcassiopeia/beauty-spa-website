@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SplitView from "@/components/SplitView";
+import { FlatCard } from "@/components/Cards";
 
 export default function Home() {
   const t = useTranslations("Homepage");
