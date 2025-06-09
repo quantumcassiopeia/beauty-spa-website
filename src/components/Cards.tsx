@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 export function FlatCard({
   image,
   title,
@@ -26,6 +26,46 @@ export function FlatCard({
           {title}
         </h3>
       </div>
+    </div>
+  );
+}
+
+export function PricingCard({
+  title,
+  description,
+  price,
+  features,
+  variant = "light",
+}: {
+  title: string;
+  description: string;
+  price: string;
+  features: string[];
+  variant?: "light" | "dark";
+}) {
+  return (
+    <div
+      className={`${
+        variant === "light"
+          ? "bg-[var(--lighter-base-color)]"
+          : "bg-[var(--base-color)] text-[var(--lighter-base-color)] "
+      } cursor-pointer flex flex-shrink-0 flex-col items-start gap-y-3 rounded-2xl p-5 h-[28rem] w-80 text-sm transition-transform duration-300 ease-in-out hover:-translate-y-2`}
+    >
+      <h1 className=" w-1/2 text-2xl font-bold">{title}</h1>
+      <p>{description}</p>
+      <h2 className="text-2xl font-bold">
+        ${price}
+        <span className="text-lg font-normal"> /session</span>
+      </h2>
+      <ul className="flex flex-col gap-y-2">
+        {features.map((feature, index) => (
+          <li key={index}>
+            <CheckCircleOutlineIcon fontSize="small" className="opacity-50" />{" "}
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <button className="mt-auto">Book now</button>
     </div>
   );
 }

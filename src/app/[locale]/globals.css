@@ -1,7 +1,17 @@
 @import "tailwindcss";
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
 :root {
   --base-color: #725b4b;
+  --lighter-base-color: #f4f0e7;
   --darker-base-color: #413831;
 
   --off-white: #f5f2ed;

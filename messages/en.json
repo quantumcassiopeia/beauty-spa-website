@@ -28,7 +28,7 @@
     "splitView": {
       "title": "Experience True Wellness at",
       "span": "Beauva",
-      "subtitle": "At Beauva, we believe true beauty blooms in balance. Our spa blends luxury and wellness, offering facials, massages, and more-each designed to renew your body, mind, and soul. Step into serenity, and let self-care become your lifestyle."
+      "subtitle": "At Beauva, we believe true beauty blooms in balance. Our spa blends luxury and wellness, offering facials, massages, and more—each designed to renew your body, mind, and soul. Step into serenity, and let self-care become your lifestyle."
     },
 
     "services": {
@@ -36,6 +36,43 @@
       "title": "Relax. Rejuvenate.",
       "span": "Repeat.",
       "subtitle": "From skincare rituals to full-body therapies, our services are tailored to meet your beauty and wellness goals."
-    }
+    },
+
+    "pricingCard": [
+      {
+        "title": "The Glow Ritual",
+        "description": "A refreshing facial and full-body treatment to reset your glow.",
+        "price": "85",
+        "features": [
+          "Deep cleansing facial",
+          "Aromatherapy body massage (60 min)",
+          "Herbal tea & wellness lounge access",
+          "Complimentary skin analysis"
+        ]
+      },
+      {
+        "title": "Beauva Essentials",
+        "description": "A full spa day experience designed to relax and recharge.",
+        "price": "145",
+        "features": [
+          "Signature facial",
+          "Aromatherapy massage (90 min)",
+          "Manicure & pedicure",
+          "Wellness snack & tea set"
+        ]
+      },
+      {
+        "title": "Radiance Retreat",
+        "description": "The ultimate luxury spa escape for complete mind and body renewal.",
+        "price": "220",
+        "features": [
+          "Premium gold facial",
+          "Hot stone therapy (90 min)",
+          "Detox body wrap",
+          "Foot ritual + herbal soak",
+          "Complimentary spa gift set"
+        ]
+      }
+    ]
   }
 }

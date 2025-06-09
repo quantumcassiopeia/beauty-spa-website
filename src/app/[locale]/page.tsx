@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SplitView from "@/components/SplitView";
-import { FlatCard } from "@/components/Cards";
+import { FlatCard, PricingCard } from "@/components/Cards";
 
 export default function Home() {
   const t = useTranslations("Homepage");
+  const pricingCards = t.raw("pricingCard") as {
+    title: string;
+    description: string;
+    price: string;
+    features: string[];
+  }[];
 
   return (
     <main className="flex flex-col items-center h-full w-full max-w-7xl mx-auto">
@@ -68,6 +74,20 @@ export default function Home() {
             title="Towel and candles"
             description="Lorem "
           />
+        </div>
+      </section>
+      <section className="flex flex-col items-center w-full px-4">
+        <div className="flex py-8 gap-x-2 w-full overflow-x-scroll md:justify-center md:gap-x-10 scroll-smooth no-scrollbar">
+          {pricingCards.map((card, index) => (
+            <PricingCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              price={card.price}
+              features={card.features}
+              variant={index === 1 ? "dark" : "light"}
+            />
+          ))}
         </div>
       </section>
     </main>
