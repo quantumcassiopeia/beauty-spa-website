@@ -89,3 +89,41 @@ export function StaffCard({
     </div>
   );
 }
+
+export function ExperienceCard({
+  title,
+  description,
+  iconPosition = "left",
+  children,
+}: {
+  title: string;
+  description: string;
+  iconPosition?: "left" | "right";
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className={`bg-[var(--lighter-base-color)] flex flex-col w-44 rounded-2xl p-4  ${
+        iconPosition === "right" ? "md:flex-row-reverse" : "md:flex-row"
+      }  md:w-80 md:items-center md:justify-between`}
+    >
+      <div>{children}</div>
+      <div>
+        <h1
+          className={`pb-1 font-bold ${
+            iconPosition === "right" ? "md:text-left" : "md:text-right"
+          }`}
+        >
+          {title}
+        </h1>
+        <p
+          className={`text-sm md:w-60 ${
+            iconPosition === "right" ? "md:text-left" : "md:text-right"
+          }`}
+        >
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
