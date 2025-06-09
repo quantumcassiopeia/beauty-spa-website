@@ -8,6 +8,7 @@ import "./globals.css";
 
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
+import { TestingButton } from "@/components/TestingButton";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider>
           <Header />
+          <TestingButton />
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
