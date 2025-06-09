@@ -74,5 +74,29 @@
         ]
       }
     ]
+  },
+  "About": {
+    "staffCard": [
+      {
+        "name": "Clara Evelyn",
+        "expertise": "Founder & Wellness Director"
+      },
+      {
+        "name": "Mira Lestari",
+        "expertise": "Lead Esthetician"
+      },
+      {
+        "name": "Natalie Rose",
+        "expertise": "Massage Therapist & Holistic Healer"
+      },
+      {
+        "name": "Jasmine Rivera",
+        "expertise": "Client Care Manager"
+      },
+      {
+        "name": "Theo Winarno",
+        "expertise": "Operational & Product Manager"
+      }
+    ]
   }
 }
