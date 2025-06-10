@@ -38,6 +38,28 @@
       "subtitle": "From skincare rituals to full-body therapies, our services are tailored to meet your beauty and wellness goals."
     },
 
+    "serviceCards": [
+      {
+        "tag": "Nail Care",
+        "title": "Signature Manicure & Pedicure"
+      },
+      { "tag": "Skincare", "title": "Radiant Glow Facial" },
+      {
+        "tag": "Body & Wellness",
+        "title": "Aromatherapy Massage"
+      },
+      {
+        "tag": "Body Treatment",
+        "title": "Detox Body Wrap"
+      }
+    ],
+
+    "experience": {
+      "title": "Our values,",
+      "span": "your experience",
+      "subtitle": "Everything we do is rooted in purpose — to nurture, uplift, and deliver beauty beyond the surface."
+    },
+
     "experienceCard": [
       {
         "title": "Holistic Healing",

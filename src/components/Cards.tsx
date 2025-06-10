@@ -1,30 +1,26 @@
 import Image from "next/image";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-export function FlatCard({
+export function ServiceCard({
   image,
   title,
-  description,
+  tag,
 }: {
   image: string;
   title: string;
-  description: string;
+  tag: string;
 }) {
   return (
-    <div className="bg-[#f4f0e7] flex gap-4 h-28 w-80 md:flex-col md:h-96 md:w-52 rounded-2xl md:bg-transparent">
-      <div className="relative h-28 w-28 rounded-l-2xl md:h-52 md:w-52 md:rounded-2xl overflow-clip">
+    <div className="bg-[#f4f0e7] relative flex w-full max-w-[27rem] md:flex-col md:justify-baseline md:bg-transparent md:w-60 md:h-[30rem] rounded-2xl">
+      <span className="absolute top-1.5 right-1.5 md:hidden">
+        <ArrowOutwardIcon fontSize="small" />
+      </span>
+      <div className="relative flex-shrink-0 h-28 w-32 rounded-l-2xl md:h-60 md:w-60 md:rounded-2xl overflow-clip">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
-      <div className="relative flex flex-col justify-between py-3 md:py-0">
-        <p className="md:text-center md:mb-3 opacity-70 ">
-          {description}
-          <span className="absolute top-1.5 -right-5 md:hidden">
-            <ArrowOutwardIcon fontSize="small" />
-          </span>
-        </p>
-        <h3 className="md:text-2xl md:text-center text-[var(--darker-base-color)]">
-          {title}
-        </h3>
+      <div className="flex flex-col justify-between p-2">
+        <p className="text-sm md:text-center md:py-2 opacity-70">{tag}</p>
+        <h3 className="md:text-center text-md ">{title}</h3>
       </div>
     </div>
   );
