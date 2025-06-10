@@ -18,6 +18,8 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center h-full w-full mx-auto">
+      {/* Hero */}
+
       <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--base-color)] ">
         <Image
           src="/images/hero.avif"
@@ -31,6 +33,9 @@ export default function Home() {
           <button className="bh-white">BUTTON 1 BTTUNO 2</button>
         </div>
       </section>
+
+      {/* Split View */}
+
       <section className="w-full relative -top-24 z-10 px-4 ">
         <SplitView
           href="/images/towelAndCandles.avif"
@@ -48,6 +53,9 @@ export default function Home() {
           </div>
         </SplitView>
       </section>
+
+      {/* Services */}
+
       <section className="flex flex-col items-center w-full max-w-7xl px-2">
         <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 mb-7 rounded-3xl ">
           {t("services.tag")}
@@ -61,15 +69,18 @@ export default function Home() {
           {serviceCards.map((card, index) => (
             <ServiceCard
               key={index}
-              image="/images/towelAndCandles.avif"
+              image={`/images/service${index + 1}.jpg`}
               title={card.title}
               tag={card.tag}
             />
           ))}
         </div>
       </section>
-      <section className="flex flex-col items-center w-full px-4">
-        <h1 className="text-center text-4xl pt-32 pb-4 md:text-5xl">
+
+      {/* Experience */}
+
+      <section className="flex flex-col items-center w-full px-2 pt-28 ">
+        <h1 className="text-center text-4xl pb-4 md:text-5xl">
           {t("experience.title")}{" "}
           <span className="text-[var(--darker-base-color)]">
             {t("experience.span")}

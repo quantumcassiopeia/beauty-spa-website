@@ -11,7 +11,7 @@ export function ServiceCard({
   tag: string;
 }) {
   return (
-    <div className="bg-[#f4f0e7] relative flex w-full max-w-[27rem] md:flex-col md:justify-baseline md:bg-transparent md:w-60 md:h-[30rem] rounded-2xl">
+    <div className="bg-[#f4f0e7] relative flex w-full max-w-[27rem] md:flex-col md:justify-baseline md:bg-transparent md:w-60  mb-auto rounded-2xl">
       <span className="absolute top-1.5 right-1.5 md:hidden">
         <ArrowOutwardIcon fontSize="small" />
       </span>
@@ -20,7 +20,7 @@ export function ServiceCard({
       </div>
       <div className="flex flex-col justify-between p-2">
         <p className="text-sm md:text-center md:py-2 opacity-70">{tag}</p>
-        <h3 className="md:text-center text-md ">{title}</h3>
+        <h3 className="md:text-center text-md">{title}</h3>
       </div>
     </div>
   );
