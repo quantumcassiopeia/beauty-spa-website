@@ -18,7 +18,7 @@ export default function Home() {
   }[];
 
   return (
-    <main className="flex flex-col gap-y-14 items-center h-full w-full mx-auto">
+    <main className="flex flex-col gap-y-14 items-center h-full w-full mx-auto px-2 ">
       {/* Hero */}
 
       <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--base-color)] ">
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section>
+      <section className="flex flex-col items-center w-full">
         <h1 className="text-center text-4xl pb-4 md:text-5xl">
           <span className="text-[var(--darker-base-color)]">
             {t("pricing.span")}
@@ -99,7 +99,7 @@ export default function Home() {
           {t("pricing.title")}
         </h1>
         <p className="text-center">{t("pricing.subtitle")}</p>
-        <div className="flex py-8 gap-x-2 w-full overflow-x-scroll md:justify-center md:gap-x-10 scroll-smooth no-scrollbar">
+        <div className="flex py-10 gap-x-2 w-full overflow-x-scroll lg:justify-center md:gap-x-10 scroll-smooth no-scrollbar">
           {pricingCards.map((card, index) => (
             <PricingCard
               key={index}
