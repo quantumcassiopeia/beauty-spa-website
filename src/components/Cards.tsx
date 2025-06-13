@@ -61,7 +61,7 @@ export function PricingCard({
           </li>
         ))}
       </ul>
-      <button className="mt-auto">Book now</button>
+      <p className="mt-auto">Book now</p>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Button from "./Button";
 
 export function BookBanner({ classname }: { classname?: string }) {
   const t = useTranslations("BookBanner");
@@ -19,8 +20,8 @@ export function BookBanner({ classname }: { classname?: string }) {
         <p className="text-end text-4xl md:text-5x text-[var(--darker-base-color)] l">
           {t("span")}
         </p>
-        <p className="py-3">{t("subtitle")}</p>
-        BOTÃO
+        <p className="pt- pb-8 ">{t("subtitle")}</p>
+        <Button>{t("button")}</Button>
       </div>
     </div>
   );
