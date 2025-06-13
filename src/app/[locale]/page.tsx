@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SplitView from "@/components/SplitView";
 import { ServiceCard, PricingCard } from "@/components/Cards";
+import { BookBanner } from "@/components/Banners";
 
 export default function Home() {
   const t = useTranslations("Homepage");
@@ -17,7 +18,7 @@ export default function Home() {
   }[];
 
   return (
-    <main className="flex flex-col items-center h-full w-full mx-auto">
+    <main className="flex flex-col gap-y-14 items-center h-full w-full mx-auto">
       {/* Hero */}
 
       <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--base-color)] ">
@@ -87,6 +88,17 @@ export default function Home() {
           </span>{" "}
         </h1>
         <p className="text-center">{t("experience.subtitle")}</p>
+      </section>
+
+      {/* Pricing */}
+      <section>
+        <h1 className="text-center text-4xl pb-4 md:text-5xl">
+          <span className="text-[var(--darker-base-color)]">
+            {t("pricing.span")}
+          </span>{" "}
+          {t("pricing.title")}
+        </h1>
+        <p className="text-center">{t("pricing.subtitle")}</p>
         <div className="flex py-8 gap-x-2 w-full overflow-x-scroll md:justify-center md:gap-x-10 scroll-smooth no-scrollbar">
           {pricingCards.map((card, index) => (
             <PricingCard
@@ -100,6 +112,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <BookBanner />
     </main>
   );
 }

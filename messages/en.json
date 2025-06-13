@@ -87,6 +87,12 @@
       }
     ],
 
+    "pricing": {
+      "span": "Wellness",
+      "title": "begins with one visit",
+      "subtitle": "Wellness Begins with One Visit No commitment needed - just choose a package that suits your mood and let your self-care journey begin."
+    },
+
     "pricingCard": [
       {
         "title": "The Glow Ritual",
@@ -147,5 +153,11 @@
         "expertise": "Operational & Product Manager"
       }
     ]
+  },
+
+  "BookBanner": {
+    "title": "Feel Beautiful.",
+    "span": "Be Beauva.",
+    "subtitle": "Ready to elevate your self-care?"
   }
 }
