@@ -3,10 +3,12 @@ import { useTranslations } from "next-intl";
 import SplitView from "@/components/SplitView";
 import {
   ServiceCard,
+  ExperienceCard,
   JourneyFlow,
   PricingCard,
   OurJourneyCard,
 } from "@/components/Cards";
+
 import { BookBanner } from "@/components/Banners";
 
 export default function Home() {
@@ -15,6 +17,12 @@ export default function Home() {
   const serviceCards = t.raw("serviceCards") as {
     tag: string;
     title: string;
+  }[];
+
+  const experienceCards = t.raw("experienceCard") as {
+    title: string;
+    description: string;
+    icon: string;
   }[];
 
   const ourJourneyCards = t.raw("ourJourneyCard") as {
@@ -106,6 +114,38 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-center">{t("experience.subtitle")}</p>
+        <div className="flex gap-3 lg:w-[58rem] lg:h-80 mt-10">
+          <div className="flex flex-col gap-4">
+            {experienceCards.slice(0, 3).map((card, index) => (
+              <ExperienceCard
+                key={index}
+                title={card.title}
+                description={card.description}
+                icon={card.icon}
+              />
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-4 flex-wrap">
+            <div className="relative rounded-2xl h-24 w-44 lg:w-64 lg:h-80 overflow-clip bg-[var(--base-color)]">
+              <Image
+                src="/images/flower.jpg"
+                fill
+                alt="Our values"
+                className="object-cover bg-[var(--base-color)] "
+              />
+            </div>
+            {experienceCards.slice(3, 6).map((card, index) => (
+              <ExperienceCard
+                key={index}
+                title={card.title}
+                description={card.description}
+                icon={card.icon}
+                iconPosition="right"
+              />
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Our numbers */}
@@ -187,7 +227,7 @@ export default function Home() {
 
       {/* Pricing */}
 
-      <section className="flex flex-col items-center w-full">
+      <section className="flex flex-col items-center w-full px-2">
         <h1 className="text-center text-4xl md:text-5xl">
           <span className="text-[var(--darker-base-color)]">
             {t("pricing.span")}
