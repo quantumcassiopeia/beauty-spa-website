@@ -25,7 +25,7 @@ export default function Home() {
   }[];
 
   return (
-    <main className="flex flex-col gap-y-36 items-center h-full w-full mx-auto px-2">
+    <main className="flex flex-col gap-y-36 items-center h-full w-full mx-auto">
       {/* Hero */}
 
       <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--base-color)] ">
@@ -95,6 +95,30 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-center">{t("experience.subtitle")}</p>
+      </section>
+
+      {/* Testimonials */}
+
+      <section className="relative flex flex-col items-center w-full  min-h-[25rem] bg-[var(--base-color)] md:min-h-[30rem] py-10 md:py-28  px-3">
+        <Image
+          src="/images/leavesBG.jpg"
+          fill
+          alt="Testimonial"
+          className="object-cover opacity-60"
+        />
+        <div className="relative flex flex-col max-w-2xl items-center text-center text-[var(--lighter-base-color)]">
+          <div className="bg-red-500 rounded-full h-10 w-10"></div>
+          <h1 className="text-4xl py-7 md:text-5xl ">
+            {t("testimonial.title")}{" "}
+            <span className="text-[var(--darker-base-color)]">
+              {t("testimonial.span")}
+            </span>
+          </h1>
+          <p className="font-light md:text-2xl ">{t("testimonial.quote")}</p>
+          <p className="text-sm text-[var(--lighter-base-color)] pt-7">
+            {t("testimonial.author")}
+          </p>
+        </div>
       </section>
 
       {/* How it works */}

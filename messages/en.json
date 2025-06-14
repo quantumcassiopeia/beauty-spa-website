@@ -87,6 +87,12 @@
       }
     ],
 
+    "testimonial": {
+      "title": "Voices of",
+      "span": "Wellness",
+      "quote": "\"Beauva is my personal escape. Every visit leaves me refreshed, glowing, and completely relaxed. The team is amazing! I've been a loyal client for over two years and it just keeps getting better.\"",
+      "author": "Lana Morris, Long-time client"
+    },
     "howItWorks": {
       "tag": "How it works",
       "title": "From Booking",

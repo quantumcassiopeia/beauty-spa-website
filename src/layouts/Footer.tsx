@@ -6,13 +6,7 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="w-full">
-      <div className="width-full w-full bg-[var(--base-color)]">
-        <div className="flex flex-col md:flex-row items-center md:justify-between w-full md:max-w-7xl mx-auto px-4 py-10 bg-green-400">
-          <h1 className="max-w-80">Stay Radiant with Beauva</h1>
-          <div className="w-80 h-10 bg-red-500">subscribe</div>
-        </div>
-      </div>
+    <footer className="w-full mt-12">
       <div className="w-full md:max-w-7xl p-4 mx-auto">
         <div className="flex flex-col md:flex-row justify-between">
           <section className="flex flex-col gap-2">
