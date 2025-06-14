@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SplitView from "@/components/SplitView";
-import { ServiceCard, JourneyFlow, PricingCard } from "@/components/Cards";
+import {
+  ServiceCard,
+  JourneyFlow,
+  PricingCard,
+  OurJourneyCard,
+} from "@/components/Cards";
 import { BookBanner } from "@/components/Banners";
 
 export default function Home() {
@@ -10,6 +15,12 @@ export default function Home() {
   const serviceCards = t.raw("serviceCards") as {
     tag: string;
     title: string;
+  }[];
+
+  const ourJourneyCards = t.raw("ourJourneyCard") as {
+    number: string;
+    span?: string;
+    description: string;
   }[];
 
   const journeyFlows = t.raw("journeyFlow") as {
@@ -95,6 +106,34 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-center">{t("experience.subtitle")}</p>
+      </section>
+
+      {/* Our numbers */}
+      <section className="flex flex-col gap-10 items-center w-full md:flex-row justify-between px-3">
+        <div className="md:w-1/2">
+          <h1 className="text-4xl pb-4 md:text-5xl">
+            {t("ourJourney.title")}{" "}
+            <span className="text-[var(--darker-base-color)]">
+              {t("ourJourney.span")}
+            </span>
+          </h1>
+          <p className="text-[var(--darker-base-color)]">
+            {t("ourJourney.story")}{" "}
+            <span className="text-[var(--base-color)]">
+              {t("ourJourney.description")}
+            </span>
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-4 md:w-1/2">
+          {ourJourneyCards.map((card, index) => (
+            <OurJourneyCard
+              key={index}
+              number={card.number}
+              span={card.span}
+              description={card.description}
+            />
+          ))}
+        </div>
       </section>
 
       {/* Testimonials */}

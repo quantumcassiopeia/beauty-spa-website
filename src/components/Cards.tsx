@@ -147,3 +147,25 @@ export function JourneyFlow({
     </div>
   );
 }
+
+export function OurJourneyCard({
+  number,
+  span,
+  description,
+}: {
+  number: string;
+  span?: string;
+  description: string;
+}) {
+  return (
+    <div className="max-w-56">
+      <h2 className="text-4xl text-[var(--darker-base-color)]">
+        {number}
+        {span && (
+          <span className="text-xl text-[var(--base-color)] ">{span}</span>
+        )}
+      </h2>
+      <p className="text-sm">{description}</p>
+    </div>
+  );
+}

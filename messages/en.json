@@ -87,6 +87,34 @@
       }
     ],
 
+    "ourJourney": {
+      "title": "Our journey",
+      "span": "in numbers",
+      "story": "Every number tells a story —",
+      "description": "of glowing skin, happy hearts, and meaningful spa moments."
+    },
+
+    "ourJourneyCard": [
+      {
+        "number": "5,2k+",
+        "description": "Happy clients served"
+      },
+      {
+        "number": "4.9",
+        "span": "/5",
+        "description": "Average customer rating"
+      },
+      {
+        "number": "10+",
+        "span": "/Years",
+        "description": "Years of experience"
+      },
+      {
+        "number": "50+",
+        "description": "Certified wellness experts"
+      }
+    ],
+
     "testimonial": {
       "title": "Voices of",
       "span": "Wellness",
