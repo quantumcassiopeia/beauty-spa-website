@@ -1,15 +1,22 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SplitView from "@/components/SplitView";
-import { ServiceCard, PricingCard } from "@/components/Cards";
+import { ServiceCard, JourneyFlow, PricingCard } from "@/components/Cards";
 import { BookBanner } from "@/components/Banners";
 
 export default function Home() {
   const t = useTranslations("Homepage");
+
   const serviceCards = t.raw("serviceCards") as {
     tag: string;
     title: string;
   }[];
+
+  const journeyFlows = t.raw("journeyFlow") as {
+    title: string;
+    description: string;
+  }[];
+
   const pricingCards = t.raw("pricingCard") as {
     title: string;
     description: string;
@@ -90,7 +97,33 @@ export default function Home() {
         <p className="text-center">{t("experience.subtitle")}</p>
       </section>
 
+      {/* How it works */}
+
+      <section className="flex flex-col items-center w-full">
+        <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 mb-7 rounded-3xl ">
+          {t("howItWorks.tag")}
+        </span>
+        <h1 className="text-center text-4xl pb-12 md:text-5xl">
+          {t("howItWorks.title")}{" "}
+          <span className="text-[var(--darker-base-color)]">
+            {t("howItWorks.span")}
+          </span>
+        </h1>
+        <div className="flex flex-wrap flex-col gap-8 items-center w-full md:justify-center md:flex-row overflow-clip ">
+          {journeyFlows.map((flow, index) => (
+            <JourneyFlow
+              key={index}
+              title={flow.title}
+              description={flow.description}
+            >
+              <div>{index + 1}</div>
+            </JourneyFlow>
+          ))}
+        </div>
+      </section>
+
       {/* Pricing */}
+
       <section className="flex flex-col items-center w-full">
         <h1 className="text-center text-4xl pb-4 md:text-5xl">
           <span className="text-[var(--darker-base-color)]">

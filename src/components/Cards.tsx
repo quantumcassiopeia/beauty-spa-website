@@ -123,3 +123,27 @@ export function ExperienceCard({
     </div>
   );
 }
+
+export function JourneyFlow({
+  children,
+  title,
+  description,
+}: {
+  children: React.ReactNode;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="relative flex w-96 pb-6 md:flex-col md:w-60 md:h-72 overflow-clip md:pl-6 md:pb-0 ">
+      <div className="absolute md:top-6 md:bottom-6 md:left-0 md:w-[1px] md:h-auto bottom-0 left-0 w-full h-[1px] bg-gradient-to-r md:bg-gradient-to-b from-transparent via-[var(--base-color)]/20 to-transparent" />
+
+      <h2 className="text-5xl w-10 pb-6 md:text-6xl">{children}</h2>
+      <div className="w-full ml-8 md:ml-0">
+        <h3 className="text-2xl text-[var(--darker-base-color)] w-45 pb-4">
+          {title}
+        </h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}

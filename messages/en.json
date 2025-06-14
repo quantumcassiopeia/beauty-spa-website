@@ -87,6 +87,31 @@
       }
     ],
 
+    "howItWorks": {
+      "tag": "How it works",
+      "title": "From Booking",
+      "span": "to Glowing"
+    },
+
+    "journeyFlow": [
+      {
+        "title": "Schedule Your Appointment",
+        "description": "Book online or call to reserve your preferred time."
+      },
+      {
+        "title": "Personalized Consultation",
+        "description": "Our specialists will assess your needs and recommend ideal treatments."
+      },
+      {
+        "title": "Relax & Rejuvenate",
+        "description": "Enjoy premium care and soothing ambiance during your session."
+      },
+      {
+        "title": "Glow Beyond the Spa",
+        "description": "Leave with post-treatment tips to maintain your wellness glow at home."
+      }
+    ],
+
     "pricing": {
       "span": "Wellness",
       "title": "begins with one visit",
