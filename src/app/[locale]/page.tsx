@@ -25,7 +25,7 @@ export default function Home() {
   }[];
 
   return (
-    <main className="flex flex-col gap-y-14 items-center h-full w-full mx-auto px-2 ">
+    <main className="flex flex-col gap-y-36 items-center h-full w-full mx-auto px-2">
       {/* Hero */}
 
       <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--base-color)] ">
@@ -44,7 +44,7 @@ export default function Home() {
 
       {/* Split View */}
 
-      <section className="w-full relative -top-24 z-10 px-4 ">
+      <section className="w-full relative bottom-56 h-92 md:h-40 z-10 px-4">
         <SplitView
           href="/images/towelAndCandles.avif"
           title="Towel and candles"
@@ -64,11 +64,11 @@ export default function Home() {
 
       {/* Services */}
 
-      <section className="flex flex-col items-center w-full max-w-7xl px-2">
-        <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 mb-7 rounded-3xl ">
+      <section className="flex flex-col items-center w-full max-w-7xl pt-6 px-2">
+        <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 rounded-3xl ">
           {t("services.tag")}
         </span>
-        <h1 className="text-center text-4xl text-[var(--darker-base-color)] mb-5 md:text-5xl">
+        <h1 className="text-center text-4xl text-[var(--darker-base-color)] my-6 md:text-5xl">
           {t("services.title")}{" "}
           <span className="text-[var(--base-color)]">{t("services.span")}</span>
         </h1>
@@ -87,12 +87,12 @@ export default function Home() {
 
       {/* Experience */}
 
-      <section className="flex flex-col items-center w-full px-2 pt-28 ">
+      <section className="flex flex-col items-center w-full px-2">
         <h1 className="text-center text-4xl pb-4 md:text-5xl">
           {t("experience.title")}{" "}
           <span className="text-[var(--darker-base-color)]">
             {t("experience.span")}
-          </span>{" "}
+          </span>
         </h1>
         <p className="text-center">{t("experience.subtitle")}</p>
       </section>
@@ -100,16 +100,16 @@ export default function Home() {
       {/* How it works */}
 
       <section className="flex flex-col items-center w-full">
-        <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 mb-7 rounded-3xl ">
+        <span className="border-2 border-[var(--base-color)]/20 px-5 py-1 rounded-3xl ">
           {t("howItWorks.tag")}
         </span>
-        <h1 className="text-center text-4xl pb-12 md:text-5xl">
+        <h1 className="text-center text-4xl py-12 md:text-5xl">
           {t("howItWorks.title")}{" "}
           <span className="text-[var(--darker-base-color)]">
             {t("howItWorks.span")}
           </span>
         </h1>
-        <div className="flex flex-wrap flex-col gap-8 items-center w-full md:justify-center md:flex-row overflow-clip ">
+        <div className="flex flex-wrap flex-col gap-8 items-center w-full md:justify-center md:flex-row">
           {journeyFlows.map((flow, index) => (
             <JourneyFlow
               key={index}
@@ -125,13 +125,13 @@ export default function Home() {
       {/* Pricing */}
 
       <section className="flex flex-col items-center w-full">
-        <h1 className="text-center text-4xl pb-4 md:text-5xl">
+        <h1 className="text-center text-4xl md:text-5xl">
           <span className="text-[var(--darker-base-color)]">
             {t("pricing.span")}
           </span>{" "}
           {t("pricing.title")}
         </h1>
-        <p className="text-center">{t("pricing.subtitle")}</p>
+        <p className="text-center py-8 ">{t("pricing.subtitle")}</p>
         <div className="flex py-10 gap-x-2 w-full overflow-x-scroll lg:justify-center md:gap-x-10 scroll-smooth no-scrollbar">
           {pricingCards.map((card, index) => (
             <PricingCard

@@ -134,7 +134,7 @@ export function JourneyFlow({
   description: string;
 }) {
   return (
-    <div className="relative flex w-96 pb-6 md:flex-col md:w-60 md:h-72 overflow-clip md:pl-6 md:pb-0 ">
+    <div className="relative flex w-80 pb-6 md:flex-col md:w-60 md:h-72 overflow-clip md:pl-6 md:pb-0">
       <div className="absolute md:top-6 md:bottom-6 md:left-0 md:w-[1px] md:h-auto bottom-0 left-0 w-full h-[1px] bg-gradient-to-r md:bg-gradient-to-b from-transparent via-[var(--base-color)]/20 to-transparent" />
 
       <h2 className="text-5xl w-10 pb-6 md:text-6xl">{children}</h2>
