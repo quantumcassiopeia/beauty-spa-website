@@ -10,9 +10,11 @@ import {
 } from "@/components/Cards";
 
 import { BookBanner } from "@/components/Banners";
+import Button from "@/components/Button";
 
 export default function Home() {
   const t = useTranslations("Homepage");
+  const buttons = useTranslations("Button");
 
   const serviceCards = t.raw("serviceCards") as {
     tag: string;
@@ -47,17 +49,29 @@ export default function Home() {
     <main className="flex flex-col gap-y-36 items-center h-full w-full mx-auto">
       {/* Hero */}
 
-      <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--base-color)] ">
+      <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--darker-base-color)] ">
         <Image
           src="/images/hero.avif"
           fill
           alt="Beauva Spa"
           className="object-cover opacity-80 z-10"
         />
-        <div className="absolute z-10 flex flex-col w-full text-center items-center px-4 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 text-white">
-          <h1 className="text-4xl md:text-5xl">{t("hero.title")}</h1>
+        <div className="absolute z-10 flex flex-col w-full text-center items-center px-4 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 text-[var(--lighter-base-color)]">
+          <h1 className="text-4xl md:text-5xl">
+            <span className="text-[var(--lighter-base-color)]/80">
+              {t("hero.span")}
+            </span>{" "}
+            {t("hero.title")}
+          </h1>
           <p>{t("hero.subtitle")}</p>
-          <button className="bh-white">BUTTON 1 BTTUNO 2</button>
+          <div className="flex flex-col gap-4 mt-8 md:flex-row">
+            <Button className="bg-[var(--lighter-base-color)]  text-[var(--base-color)]">
+              {buttons("bookExperience")}
+            </Button>
+            <Button className=" backdrop-blur-sm bg-[var(--base-color)]/50 ">
+              {buttons("explore")}
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -68,7 +82,7 @@ export default function Home() {
           href="/images/towelAndCandles.avif"
           title="Towel and candles"
         >
-          <div className="flex flex-col items-center p-8 md:py-16 md:p-20  md:items-start bg-[var(--off-white)] text-center md:text-left h-full">
+          <div className="flex flex-col items-center p-8 md:py-16 md:p-16  md:items-start bg-[var(--off-white)] text-center md:text-left h-full">
             <div className="bg-red-500 rounded-full h-10 w-10"></div>
             <h1 className="text-4xl text-[var(--darker-base-color)] my-6 md:text-5xl">
               {t("splitView.title")}{" "}
@@ -77,6 +91,9 @@ export default function Home() {
               </span>
             </h1>
             <p>{t("splitView.subtitle")}</p>
+            <Button className="bg-[var(--base-color)] text-[var(--lighter-base-color)] mt-3 ">
+              {buttons("getToKnow")}
+            </Button>
           </div>
         </SplitView>
       </section>

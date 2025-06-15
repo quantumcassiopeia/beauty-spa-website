@@ -4,6 +4,7 @@ import Button from "./Button";
 
 export function BookBanner({ classname }: { classname?: string }) {
   const t = useTranslations("BookBanner");
+  const button = useTranslations("Button");
 
   return (
     <div
@@ -21,7 +22,9 @@ export function BookBanner({ classname }: { classname?: string }) {
           {t("span")}
         </p>
         <p className="pt- pb-8 ">{t("subtitle")}</p>
-        <Button>{t("button")}</Button>
+        <Button className="bg-[var(--base-color)] text-[var(--lighter-base-color)]">
+          {button("bookExperience")}
+        </Button>
       </div>
     </div>
   );

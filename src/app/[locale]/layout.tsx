@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${bricolage.variable} relative antialiased h-screen flex flex-col `}
+        className={`${bricolage.variable} relative antialiased h-screen flex flex-col`}
       >
         <NextIntlClientProvider>
           <Header />

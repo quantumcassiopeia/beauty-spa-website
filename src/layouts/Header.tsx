@@ -2,9 +2,13 @@
 
 import Navbar from "@/components/Navbar";
 import HamburgerMenu from "@/components/HamburgerMenu";
+import Button from "@/components/Button";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
+  const button = useTranslations("Button");
+
   const lastScrollY = useRef(0);
   const [isMobileHeaderHidden, setIsMobileHeaderHidden] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
@@ -37,7 +41,9 @@ export default function Header() {
         <div className="w-25 h-10 bg-red-500"></div>
         <Navbar className="hidden md:flex gap-4 bg-white/40 px-3 py-1 rounded-full " />
         <HamburgerMenu className="md:hidden bg-[var(--base-color)]/40 rounded-sm " />
-        <button className="hidden md:block ">Login</button>
+        <Button className="hidden md:block bg-[var(--lighter-base-color)] ">
+          {button("signUp")}
+        </Button>
       </div>
     </header>
   );

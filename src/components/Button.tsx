@@ -29,7 +29,7 @@ export default function Button(props: ButtonProps) {
   } = props as ButtonProps;
 
   const baseStyle =
-    "cursor-pointer bg-[var(--darker-base-color)] text-[var(--lighter-base-color)] px-4 py-1.5 whitespace-nowrap rounded-3xl hover:scale-101 transition duration-500 ease-in-out";
+    "cursor-pointer px-4 py-1.5 whitespace-nowrap rounded-3xl hover:scale-101 transition duration-500 ease-in-out";
 
   const combinedClassName = `${baseStyle} ${className}`;
 

@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import Button from "@/components/Button";
+import { useTranslations } from "next-intl";
 
 export default function HamburgerMenu({ className }: { className?: string }) {
+  const button = useTranslations("Button");
+
   const [isOpened, setIsOpened] = useState(false);
 
   useEffect(() => {
@@ -61,6 +65,9 @@ export default function HamburgerMenu({ className }: { className?: string }) {
         `}
       >
         <Navbar className="pt-10 pl-4 inline-flex flex-col gap-4 relative" />
+        <Button className="block bg-[var(--lighter-base-color)] mt-6 ml-2 ">
+          {button("signUp")}
+        </Button>
       </div>
     </div>
   );

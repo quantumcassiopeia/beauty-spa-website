@@ -21,8 +21,9 @@
 
   "Homepage": {
     "hero": {
-      "title": "Your escape begins here",
-      "subtitle": "Step into a world of calm, comfort, and beauty - curated just for you."
+      "span": "Your escape",
+      "title": "begins here",
+      "subtitle": "Step into a world of calm, comfort, and beauty — curated just for you."
     },
 
     "splitView": {
@@ -220,10 +221,17 @@
     ]
   },
 
+  "Button": {
+    "signUp": "Sign Up",
+    "bookExperience": "Book your experience",
+    "explore": "Explore Services",
+    "getToKnow": "Get to know more",
+    "subscribe": "Subscribe"
+  },
+
   "BookBanner": {
     "title": "Feel Beautiful.",
     "span": "Be Beauva.",
-    "subtitle": "Ready to elevate your self-care?",
-    "button": "Book your experience"
+    "subtitle": "Ready to elevate your self-care?"
   }
 }
