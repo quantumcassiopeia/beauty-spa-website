@@ -2,21 +2,27 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Button from "@/components/Button";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function HamburgerMenu({ className }: { className?: string }) {
   const button = useTranslations("Button");
+  const pathname = usePathname();
 
   const [isOpened, setIsOpened] = useState(false);
 
   useEffect(() => {
-    const handleMouseClick = () => setIsOpened(false);
-    if (isOpened === true) {
-      document.addEventListener("click", handleMouseClick);
-      document.addEventListener("scroll", handleMouseClick);
+    setIsOpened(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => setIsOpened(false);
+
+    if (isOpened) {
+      document.addEventListener("scroll", handleScroll);
     }
+
     return () => {
-      document.removeEventListener("click", handleMouseClick);
-      document.removeEventListener("scroll", handleMouseClick);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, [isOpened]);
 
@@ -65,7 +71,7 @@ export default function HamburgerMenu({ className }: { className?: string }) {
         `}
       >
         <Navbar className="pt-10 pl-4 inline-flex flex-col gap-4 relative" />
-        <Button className="block bg-[var(--lighter-base-color)] mt-6 ml-2 ">
+        <Button className="block bg-[var(--lighter-base-color)] mt-6 ml-2">
           {button("signUp")}
         </Button>
       </div>
