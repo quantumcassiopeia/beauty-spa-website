@@ -52,7 +52,7 @@ export default function AboutPage() {
         <div className="w-full h-px bg-[var(--base-color)] opacity-50"></div>
       </section>
 
-      {/* Our values  */}
+      {/* our values  */}
 
       <section className="bg-[var(--base-color)] w-full">
         <div className="flex flex-col items-center justify-between max-w-7xl mx-auto md:flex-row text-[var(--lighter-base-color)] py-16 px-1 md:px-4 ">
