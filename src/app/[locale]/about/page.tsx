@@ -2,9 +2,17 @@ import { useTranslations } from "next-intl";
 import { StaffCard } from "@/components/Cards";
 export default function AboutPage() {
   const t = useTranslations("About");
+  const experience = useTranslations("Homepage");
+
   const staffCards = t.raw("staffCard") as {
     name: string;
     expertise: string;
+  }[];
+
+  const experienceItems = experience.raw("experienceCard") as {
+    title: string;
+    description: string;
+    icon: string;
   }[];
 
   return (
@@ -46,7 +54,45 @@ export default function AboutPage() {
 
       {/* Our values  */}
 
-      <div className="bg-[var(--base-color)] w-full h-92 max-w-7xl mx-auto"></div>
+      <section className="bg-[var(--base-color)] w-full">
+        <div className="flex flex-col items-center justify-between max-w-7xl mx-auto md:flex-row text-[var(--lighter-base-color)] py-16 px-1 md:px-4 ">
+          <div className="max-w-2xs">
+            <h1 className="text-5xl text-center md:text-left md:text-6xl">
+              {experience("experience.title")}{" "}
+              <span className="opacity-60">
+                {experience("experience.span")}
+              </span>
+            </h1>
+            <p className="py-8">{experience("experience.subtitle")}</p>
+          </div>
+          <ul className="flex flex-col gap-4">
+            {experienceItems.map((item, index) => (
+              <li
+                key={index}
+                className="max-w-92 border border-[var(--lighter-base-color)]/20 rounded-2xl p-3 font-light "
+              >
+                <div className="flex items-center gap-x-2 ">
+                  <div
+                    className="w-10 h-10 bg-[var(--lighter-base-color)]"
+                    style={{
+                      WebkitMaskImage: `url(/icons/${item.icon}.svg)`,
+                      maskImage: `url(/icons/${item.icon}.svg)`,
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                    }}
+                  />
+                  <h3 className="text-xl">{item.title}</h3>
+                </div>
+                <p>{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* step inside */}
 
