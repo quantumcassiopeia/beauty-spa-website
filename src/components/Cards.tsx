@@ -68,19 +68,19 @@ export function PricingCard({
 
 export function StaffCard({
   image,
-  title,
+  name,
   expertise,
 }: {
   image: string;
-  title: string;
+  name: string;
   expertise: string;
 }) {
   return (
     <div className="w-40 md:w-52 ">
       <div className="relative rounded-2xl h-40 w-40 md:h-72 md:w-52 overflow-clip">
-        <Image src={image} alt={title} fill className="object-cover" />
+        <Image src={image} alt={name} fill className="object-cover" />
       </div>
-      <h1 className="text-center text-2xl pt-4 font-bold">{title}</h1>
+      <h1 className="text-center text-2xl pt-4 font-bold">{name}</h1>
       <h2 className="text-center text-sm">{expertise}</h2>
     </div>
   );

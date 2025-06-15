@@ -197,6 +197,26 @@
     ]
   },
   "About": {
+    "hero": {
+      "title": "Rooted in Wellness,",
+      "span": "Elevated by Beauty",
+      "subtitle": "Discover the story, spirit, and soul behind every serene moment at Beauva.",
+      "strong": "Self-care is more than a luxury —",
+      "description": "it's a lifestyle. Nestled in a calm, elegant space, our spa is a sanctuary where beauty, wellness, and inner balance come together."
+    },
+
+    "stepInside": {
+      "span": "Step Inside",
+      "title": "Our Sanctuary",
+      "subtitle": "Get a glimpse of the Beauva experience — where every detail is designed for serenity, beauty, and bliss."
+    },
+
+    "staff": {
+      "title": "Meet the Experts,",
+      "span": "Behind the Glow",
+      "subtitle": "Our team is made up of certified estheticians, wellness therapists, and hospitality professionals — all united by a passion for mindful beauty and compassionate care."
+    },
+
     "staffCard": [
       {
         "name": "Clara Evelyn",

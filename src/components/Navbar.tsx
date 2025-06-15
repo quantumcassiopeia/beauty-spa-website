@@ -10,13 +10,13 @@ export default function Navbar({ className }: { className?: string }) {
           <Link href="/">{t("home")}</Link>
         </li>
         <li>
-          <Link href="/">{t("about")}</Link>
+          <Link href="/about">{t("about")}</Link>
         </li>
         <li>
-          <Link href="/">{t("services")}</Link>
+          <Link href="/services">{t("services")}</Link>
         </li>
         <li>
-          <Link href="/">{t("contact")}</Link>
+          <Link href="/contact">{t("contact")}</Link>
         </li>
       </ul>
     </nav>
