@@ -46,7 +46,7 @@ export default function Home() {
   }[];
 
   return (
-    <main className="flex flex-col gap-y-36 items-center h-full w-full mx-auto">
+    <main className="flex flex-col gap-y-36 items-center h-full w-full">
       {/* Hero */}
 
       <section className="relative h-[30rem] md:h-[48rem] w-full bg-[var(--darker-base-color)] ">
@@ -56,7 +56,7 @@ export default function Home() {
           alt="Beauva Spa"
           className="object-cover opacity-80 z-10"
         />
-        <div className="absolute z-10 flex flex-col w-full text-center items-center px-4 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 text-[var(--lighter-base-color)]">
+        <div className="absolute z-10 flex flex-col w-full text-center items-center px-4 top-1/3 md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-[var(--lighter-base-color)]">
           <h1 className="text-4xl md:text-5xl">
             <span className="text-[var(--lighter-base-color)]/80">
               {t("hero.span")}
@@ -109,7 +109,7 @@ export default function Home() {
           <span className="text-[var(--base-color)]">{t("services.span")}</span>
         </h1>
         <p className="text-center">{t("services.subtitle")}</p>
-        <div className="flex flex-wrap flex-col items-center w-full pt-8 gap-5 md:justify-evenly md:gap-2 md:flex-row md:pt-14">
+        <div className="flex flex-wrap flex-col items-center w-full pt-8 gap-5 justify-between md:gap-2 md:flex-row md:pt-14">
           {serviceCards.map((card, index) => (
             <ServiceCard
               key={index}
@@ -166,15 +166,15 @@ export default function Home() {
       </section>
 
       {/* Our numbers */}
-      <section className="flex flex-col gap-10 items-center w-full md:flex-row justify-between px-3">
+      <section className="flex flex-col gap-8 items-center w-full md:flex-row justify-between px-2 mx-auto max-w-7xl">
         <div className="md:w-1/2">
-          <h1 className="text-4xl pb-4 md:text-5xl">
+          <h1 className="text-4xl  text-center pb-4 md:text-5xl md:text-left">
             {t("ourJourney.title")}{" "}
             <span className="text-[var(--darker-base-color)]">
               {t("ourJourney.span")}
             </span>
           </h1>
-          <p className="text-[var(--darker-base-color)]">
+          <p className="text-[var(--darker-base-color)] text-center md:text-left">
             {t("ourJourney.story")}{" "}
             <span className="text-[var(--base-color)]">
               {t("ourJourney.description")}
@@ -193,17 +193,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonial */}
 
-      <section className="relative flex flex-col items-center w-full  min-h-[25rem] bg-[var(--base-color)] md:min-h-[30rem] py-10 md:py-28  px-3">
+      <section className="relative flex flex-col items-center justify-center w-full h-[40rem] bg-[var(--base-color)] py-10 px-2">
         <Image
           src="/images/leavesBG.jpg"
           fill
           alt="Testimonial"
           className="object-cover opacity-60"
         />
-        <div className="relative flex flex-col max-w-2xl items-center text-center text-[var(--lighter-base-color)]">
-          <div className="bg-red-500 rounded-full h-10 w-10"></div>
+        <div className="relative flex flex-col max-w-3xl items-center text-center text-[var(--lighter-base-color)]">
+          <div className="bg-red-500 rounded-full h-10 w-10" />
           <h1 className="text-4xl py-7 md:text-5xl ">
             {t("testimonial.title")}{" "}
             <span className="text-[var(--darker-base-color)]">

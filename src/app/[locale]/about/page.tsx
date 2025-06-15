@@ -16,7 +16,7 @@ export default function AboutPage() {
   }[];
 
   return (
-    <main className="flex flex-col gap-12 mt-25">
+    <main className="flex flex-col gap-20 mt-25">
       {/* hero */}
 
       <section className="flex flex-col gap-12 max-w-7xl w-full mx-auto px-1 md:px-4">
@@ -103,12 +103,12 @@ export default function AboutPage() {
           </span>{" "}
           {t("stepInside.title")}
         </h1>
-        <p className="text-center py-4 ">{t("stepInside.subtitle")}</p>
+        <p className="text-center pt-4 pb-8">{t("stepInside.subtitle")}</p>
         <video
           src="/images/spademo.mp4"
           controls
           className="max-w-5xl w-full rounded-2xl bg-[var(--base-color)]"
-        ></video>
+        />
       </section>
 
       {/* timeline */}
@@ -117,8 +117,8 @@ export default function AboutPage() {
 
       {/* our team */}
 
-      <section className="flex flex-col gap-12 max-w-7xl w-full mx-auto px-1 md:px-4">
-        <div className="flex flex-col items-center gap-4 justify-between md:flex-row">
+      <section className="flex flex-col gap-12 max-w-7xl w-full mx-auto px-4">
+        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <h1 className="text-4xl text-center md:text-left max-w-92">
             {t("staff.title")}{" "}
             <span className="text-[var(--darker-base-color)]">
@@ -129,7 +129,7 @@ export default function AboutPage() {
             {t("staff.subtitle")}
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 justify-center ">
+        <div className="flex justify-evenly flex-wrap gap-4 lg:justify-between ">
           {staffCards.map((card, index) => (
             <StaffCard
               key={card.name}
