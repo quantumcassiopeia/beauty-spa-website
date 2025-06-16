@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -10,8 +11,8 @@ export default function Footer() {
       <div className="w-full md:max-w-7xl p-4 mx-auto">
         <div className="flex flex-col md:flex-row justify-between">
           <section className="flex flex-col gap-2">
-            <div className="mb-10 w-25 h-10 bg-red-500"></div>
-            <h3>{t("openingHours")}</h3>
+            <Logo color="dark" name />
+            <h3 className="mt-10">{t("openingHours")}</h3>
             <p>
               <span className="font-bold text-[var(--darker-base-color)]">
                 {t("workingDays")}

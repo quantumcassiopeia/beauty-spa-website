@@ -11,6 +11,7 @@ import {
 
 import { BookBanner } from "@/components/Banners";
 import Button from "@/components/Button";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   const t = useTranslations("Homepage");
@@ -83,7 +84,7 @@ export default function Home() {
           title="Towel and candles"
         >
           <div className="flex flex-col items-center p-8 md:py-16 md:p-16  md:items-start bg-[var(--off-white)] text-center md:text-left h-full">
-            <div className="bg-red-500 rounded-full h-10 w-10"></div>
+            <Logo color="dark" />
             <h1 className="text-4xl text-[var(--darker-base-color)] my-6 md:text-5xl">
               {t("splitView.title")}{" "}
               <span className="text-[var(--base-color)]">
@@ -203,7 +204,7 @@ export default function Home() {
           className="object-cover opacity-60"
         />
         <div className="relative flex flex-col max-w-3xl items-center text-center text-[var(--lighter-base-color)]">
-          <div className="bg-red-500 rounded-full h-10 w-10" />
+          <Logo color="light" />
           <h1 className="text-4xl py-7 md:text-5xl ">
             {t("testimonial.title")}{" "}
             <span className="text-[var(--darker-base-color)]">

@@ -5,6 +5,7 @@ import HamburgerMenu from "@/components/HamburgerMenu";
 import Button from "@/components/Button";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   const button = useTranslations("Button");
@@ -38,7 +39,7 @@ export default function Header() {
       } ${isMobileHeaderHidden ? "-translate-y-full" : ""} md:-translate-y-0`}
     >
       <div className="flex justify-between items-center w-full h-full max-w-7xl px-4 mx-auto ">
-        <div className="w-25 h-10 bg-red-500"></div>
+        <Logo color={isAtTop ? "light" : "dark"} name />
         <Navbar className="hidden md:flex gap-4 bg-white/40 px-3 py-1 rounded-full " />
         <HamburgerMenu className="md:hidden bg-[var(--base-color)]/40 rounded-sm " />
         <Button className="hidden md:block bg-[var(--lighter-base-color)] ">

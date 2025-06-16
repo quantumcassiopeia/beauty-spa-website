@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { StaffCard } from "@/components/Cards";
+import Logo from "@/components/Logo";
 export default function AboutPage() {
   const t = useTranslations("About");
   const experience = useTranslations("Homepage");
@@ -48,7 +49,7 @@ export default function AboutPage() {
 
       <section className="flex items-center justify-center  mx-10 ">
         <div className="w-full h-px bg-[var(--base-color)] opacity-50"></div>
-        <div className="bg-red-500 rounded-full h-10 w-10 mx-6 "></div>
+        <Logo color="dark" className="mx-4" />
         <div className="w-full h-px bg-[var(--base-color)] opacity-50"></div>
       </section>
 
