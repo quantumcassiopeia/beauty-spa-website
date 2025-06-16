@@ -40,7 +40,7 @@ export default function Header() {
     >
       <div className="flex justify-between items-center w-full h-full max-w-7xl px-4 mx-auto ">
         <Logo color={isAtTop ? "light" : "dark"} name />
-        <Navbar className="hidden md:flex gap-4 bg-white/40 px-3 py-1 rounded-full " />
+        <Navbar className="hidden md:flex gap-4 bg-white/75 px-3 py-1 rounded-full " />
         <HamburgerMenu className="md:hidden bg-[var(--base-color)]/40 rounded-sm " />
         <Button className="hidden md:block bg-[var(--lighter-base-color)] ">
           {button("signUp")}

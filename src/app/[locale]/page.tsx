@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* Split View */}
 
-      <section className="w-full relative bottom-56 h-92 md:h-40 z-10 px-4">
+      <section className="flex w-full max-w-7xl relative bottom-52 z-10 px-4 mx-auto ">
         <SplitView
           href="/images/towelAndCandles.avif"
           title="Towel and candles"

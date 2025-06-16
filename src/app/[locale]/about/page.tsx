@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { StaffCard } from "@/components/Cards";
 import Logo from "@/components/Logo";
+import Image from "next/image";
 export default function AboutPage() {
   const t = useTranslations("About");
   const experience = useTranslations("Homepage");
@@ -18,7 +19,7 @@ export default function AboutPage() {
 
   return (
     <main className="flex flex-col gap-20">
-      <div className="w-full h-20 bg-[var(--base-color)]" />
+      <div className="w-full h-16 md:h-20 bg-[var(--darker-base-color)]" />
       {/* hero */}
 
       <section className="flex flex-col gap-12 max-w-7xl w-full mx-auto px-1 md:px-4">
@@ -34,9 +35,30 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="flex flex-wrap gap-3 justify-center items-center lg:justify-between">
-          <div className="bg-[var(--base-color)] rounded-2xl w-40 h-40 md:w-92 md:h-72"></div>
-          <div className="bg-[var(--base-color)] rounded-2xl w-40 h-40 md:w-92 md:h-72"></div>
-          <div className="bg-[var(--base-color)] rounded-2xl w-82 h-40 md:w-92 md:h-72"></div>
+          <div className="relative bg-[var(--base-color)] rounded-2xl w-40 h-40 md:w-92 md:h-72 overflow-clip ">
+            <Image
+              src="/images/about1.webp"
+              alt="Stones and Bambus"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative bg-[var(--base-color)] rounded-2xl w-40 h-40 md:w-92 md:h-72 overflow-clip ">
+            <Image
+              src="/images/about2.webp"
+              alt="Candles"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative bg-[var(--base-color)] rounded-2xl w-82 h-40 md:w-92 md:h-72 overflow-clip">
+            <Image
+              src="/images/about3.webp"
+              alt="Creams and towels"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
         <p className="text-xl text-justify px-2 md:text-3xl md:text-center">
           <span className="text-[var(--darker-base-color)]">

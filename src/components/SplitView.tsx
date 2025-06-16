@@ -10,7 +10,7 @@ export default function SplitView({
   title: string;
 }) {
   return (
-    <div className="rounded-3xl overflow-clip flex flex-col h-[45rem] w-full md:flex-row md:h-[30rem] md:max-w-7xl mx-auto ">
+    <div className="rounded-3xl overflow-clip flex flex-col h-[50rem] w-full md:flex-row md:h-[30rem] md:max-w-7xl mx-auto ">
       <div className="relative h-1/3 md:w-1/3 md:h-full">
         <Image src={href} fill alt={title} className="object-cover" />
       </div>
