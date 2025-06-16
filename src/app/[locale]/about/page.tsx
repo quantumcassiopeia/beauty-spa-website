@@ -17,7 +17,8 @@ export default function AboutPage() {
   }[];
 
   return (
-    <main className="flex flex-col gap-20 mt-25">
+    <main className="flex flex-col gap-20">
+      <div className="w-full h-20 bg-[var(--base-color)]" />
       {/* hero */}
 
       <section className="flex flex-col gap-12 max-w-7xl w-full mx-auto px-1 md:px-4">
