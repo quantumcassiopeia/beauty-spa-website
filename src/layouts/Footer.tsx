@@ -2,12 +2,14 @@ import Navbar from "@/components/Navbar";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Logo from "@/components/Logo";
+import Subscribe from "@/components/Subscribe";
 
 export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
     <footer className="w-full mt-12">
+      <Subscribe className="mb-10" />
       <div className="w-full md:max-w-7xl p-4 mx-auto">
         <div className="flex flex-col md:flex-row justify-between">
           <section className="flex flex-col gap-2">

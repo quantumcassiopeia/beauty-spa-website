@@ -253,5 +253,13 @@
     "title": "Feel Beautiful.",
     "span": "Be Beauva.",
     "subtitle": "Ready to elevate your self-care?"
+  },
+
+  "Subscribe": {
+    "title": "Stay Radiant with",
+    "span": "Beauva",
+    "description": "Sign up to receive exclusive offers, beauty tips, and wellness inspiration.",
+    "enterEmail": "Enter your e-mail",
+    "button": "Subscribe"
   }
 }
