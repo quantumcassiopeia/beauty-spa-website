@@ -171,3 +171,32 @@ export function OurJourneyCard({
     </div>
   );
 }
+
+export default function FeaturesCard({
+  tag,
+  title,
+  description,
+  src,
+}: {
+  tag: string;
+  title: string;
+  description: string;
+  src: string;
+}) {
+  return (
+    <div className="group relative w-80 h-56 rounded-2xl md:h-92 md:w-72 overflow-clip">
+      <div className="absolute z-10 bottom-0 w-full text-[var(--lighter-base-color)] backdrop-blur-sm bg-[var(--darker-base-color)]/80">
+        <div className="flex justify-between p-3 gap-12 h-18 md:h-16 md:flex-col md:gap-0 ">
+          <p className="opacity-70 text-sm text-left md:text-center">{tag}</p>
+          <h2 className="text-right md:text-center">{title}</h2>
+        </div>
+        <p className="hidden text-center px-3 text-sm leading-6 pt-6 opacity-70 h-0 group-hover:h-50 transition-all duration-700 ease-in-out md:block">
+          {description}
+        </p>
+      </div>
+      <div className="relative h-full w-full">
+        <Image src={src} alt={title} fill className="object-cover" />
+      </div>
+    </div>
+  );
+}

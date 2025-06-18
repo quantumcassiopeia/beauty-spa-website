@@ -241,6 +241,45 @@
     ]
   },
 
+  "ServicesPage": {
+    "title": "Relax. Rejuvenate.",
+    "span": "Repeat.",
+    "subtitle": "From skincare rituals to full-body therapies, our services are tailored to meet your beauty and wellness goals.",
+
+    "FeaturesCards": [
+      {
+        "tag": "Skincare",
+        "title": "Radiant Glow Facial",
+        "description": "A revitalizing facial treatment designed to restore your skin’s natural radiance and glow."
+      },
+      {
+        "tag": "Body & Wellness",
+        "title": "Aromatherapy Massage",
+        "description": "Relax your body and mind with a gentle massage enhanced by therapeutic essential oils."
+      },
+      {
+        "tag": "Nail Care",
+        "title": "Signature Manicure & Pedicure",
+        "description": "Enjoy expert nail care with exfoliation, hydration, and polish for beautiful, healthy hands and feet."
+      },
+      {
+        "tag": "Massage Therapy",
+        "title": "Hot Stone Therapy",
+        "description": "Smooth, heated stones are placed and massaged along the body to relieve tension, improve circulation, and calm the nervous system."
+      },
+      {
+        "tag": "Body Treatment",
+        "title": "Detox Body Wrap",
+        "description": "A full-body treatment that uses detoxifying ingredients to cleanse, nourish, and renew your skin."
+      },
+      {
+        "tag": "Beauty Enhancements",
+        "title": "Brow & Lash Care",
+        "description": "Define and enhance your natural beauty with professional brow shaping and lash treatments."
+      }
+    ]
+  },
+
   "Button": {
     "signUp": "Sign Up",
     "bookExperience": "Book your experience",
