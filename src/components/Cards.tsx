@@ -137,8 +137,10 @@ export function JourneyFlow({
 }) {
   return (
     <div className="relative flex w-80 pb-6 md:flex-col md:w-60 md:h-72 overflow-clip md:pl-6 md:pb-0">
+      <span>
+        <ArrowOutwardIcon />
+      </span>
       <div className="absolute md:top-6 md:bottom-6 md:left-0 md:w-[1px] md:h-auto bottom-0 left-0 w-full h-[1px] bg-gradient-to-r md:bg-gradient-to-b from-transparent via-[var(--base-color)]/20 to-transparent" />
-
       <h2 className="text-5xl w-10 pb-6 md:text-6xl">{children}</h2>
       <div className="w-full ml-8 md:ml-0">
         <h3 className="text-2xl text-[var(--darker-base-color)] w-45 pb-4">
@@ -184,13 +186,17 @@ export default function FeaturesCard({
   src: string;
 }) {
   return (
-    <div className="group relative w-80 h-56 rounded-2xl md:h-92 md:w-72 overflow-clip">
+    <div className="group cursor-pointer relative w-92 h-64 rounded-2xl md:h-[30rem] md:w-[23rem] overflow-clip">
+      <span className="absolute z-10 top-2 right-2">
+        <ArrowOutwardIcon />
+      </span>
+
       <div className="absolute z-10 bottom-0 w-full text-[var(--lighter-base-color)] backdrop-blur-sm bg-[var(--darker-base-color)]/80">
-        <div className="flex justify-between p-3 gap-12 h-18 md:h-16 md:flex-col md:gap-0 ">
+        <div className="flex justify-between p-3 gap-16 h-20 md:h-20 md:flex-col md:gap-0 ">
           <p className="opacity-70 text-sm text-left md:text-center">{tag}</p>
-          <h2 className="text-right md:text-center">{title}</h2>
+          <h2 className="text-right text-2xl md:text-center">{title}</h2>
         </div>
-        <p className="hidden text-center px-3 text-sm leading-6 pt-6 opacity-70 h-0 group-hover:h-50 transition-all duration-700 ease-in-out md:block">
+        <p className="hidden text-center font-light px-8 leading-6 pt-6 opacity-70 h-0 group-hover:h-50 transition-all duration-700 ease-in-out md:block">
           {description}
         </p>
       </div>

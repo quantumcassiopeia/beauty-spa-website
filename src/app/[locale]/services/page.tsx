@@ -30,7 +30,7 @@ export default function ServicesPage() {
           {featuresCardsCards.map((card, index) => (
             <FeaturesCard
               key={index}
-              src={`/images/service1.jpg`}
+              src={`/images/feature${index + 1}.webp`}
               title={card.title}
               tag={card.tag}
               description={card.description}
